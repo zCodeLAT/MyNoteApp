@@ -10,8 +10,11 @@ class Note extends Component {
     }
     handleRemove(id){
         //console.log(id);
-        //alert('remove: ', id);
+        const response=window.confirm('Está seguro que desea eliminar la nota?');
+        if(response){
         this.props.removeNote(id);
+        }
+        return;
     }
 
     render(){

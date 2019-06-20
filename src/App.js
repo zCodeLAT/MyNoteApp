@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 
 import firebase from 'firebase';
-import {DB_CONFIG} from './config/config.js';
+import { DB_CONFIG } from './config/config';
 import 'firebase/database';
 
 import Note from './Note/Note';
@@ -17,10 +17,11 @@ class App extends Component {
         // {noteId: 2, noteContent: 'note 2'},
       ]
     }
-    this.app = firebase.initializeApp(DB_CONFIG);
+    
+    this.app=firebase.initializeApp(DB_CONFIG);
     this.db = this.app.database().ref().child('notes');
     this.addNote = this.addNote.bind(this);
-    this.removeNote = this.removeNote.bind(this);
+    this.removeNote = this.removeNote.bind(this); 
   }
   //A continuación: Apenas el componente se ha mostrado, agregale un listener. 
   //Cuando un nuevo item se ha agregado, pasale todo al estado y actualiza el mismo.
@@ -35,7 +36,7 @@ class App extends Component {
     })
     this.db.on('child_removed', snap => {
       for(let i=0; i<notes.length; i++){
-        if(notes[i].noteId = snap.key){
+        if(notes[i].noteId === snap.key){
           notes.splice(i, 1);
         }
       }
@@ -43,7 +44,7 @@ class App extends Component {
     })
   }
 
-  remoteNote(noteId){
+  removeNote(noteId){
     this.db.child(noteId).remove();
   }
 
@@ -53,7 +54,7 @@ class App extends Component {
     //   noteId: notes.length + 1,
     //   noteContent: note
     // });
-    // this.setState({notes});
+    //this.setState({notes});
     this.db.push().set({noteContent: note});
   }
 
@@ -72,7 +73,7 @@ class App extends Component {
                     noteContent={note.noteContent}
                     noteId={note.noteId}
                     key={note.noteId}
-                    removeNote={this.remoteNote}
+                    removeNote={this.removeNote}
                   />
                 )
               })

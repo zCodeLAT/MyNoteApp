@@ -2,15 +2,15 @@
 
 A simple application that shows, saves and deletes notes using a Firebase database.
 
-### 'git clone'
-### 'npm install'
-### 'npm run start'
+### `git clone`
+### `npm install`
+### `npm run start`
 
 For deprecated of failing modules situation:
 
-### 'npx npm-check-updates -u'
-### 'npm install'
-### 'npm run start'
+### `npx npm-check-updates -u`
+### `npm install`
+### `npm run start`
 
 ------------
 

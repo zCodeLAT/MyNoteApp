@@ -1,17 +1,18 @@
-# reactFirebaseApp
+# MyNoteApp
 
 A simple application that shows, saves and deletes notes using a Firebase database.
 
-git clone
-npm install
+### 'git clone'
+### 'npm install'
+### 'npm run start'
 
 For deprecated of failing modules situation:
 
-npx npm-check-updates -u
-npm install
+### 'npx npm-check-updates -u'
+### 'npm install'
+### 'npm run start'
 
-and then...
-
+------------
 
 ## Available Scripts
 

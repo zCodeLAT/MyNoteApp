@@ -1,4 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# reactFirebaseApp
+
+A simple application that shows, saves and deletes notes using a Firebase database.
+
+git clone
+npm install
+
+For deprecated of failing modules situation:
+
+npx npm-check-updates -u
+npm install
+
+and then...
+
 
 ## Available Scripts
 
@@ -66,4 +79,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# reactFirebaseApp
+
